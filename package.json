@@ -4,15 +4,18 @@
   "description": "",
   "private": true,
   "scripts": {
-    "commit": "git add . && git-cz",
-    "format": "prettier --write {{changed}} \"test/**/*.js\" \"src/**/*.js\" \"src/**/*.vue\" \"src/**/*.json\" \"src/**/*.css\" \"src/**/*.scss\" ",
+    "commit": "git add . && git cz",
+    "format": "prettier --write {{changed}} \"test/**/*.js\" \"src/**/*.js\" \"src/**/*.json\" \"src/**/*.css\" ",
     "precommit": "lint-staged",
     "server": "node server.js",
+    "dev-server": "node dev-server.js",
     "watch": "webpack --watch --config webpack.config.environment.js",
-    "start": "webpack-dev-server --open --config webpack.config.environment.js",
+    "start-environment": "webpack-dev-server --open --config webpack.config.environment.js",
+    "start-hotreplace": "webpack-dev-server --open --config webpack.config.hotreplace.js",
     "resource": "npx webpack --config webpack.config.resource.js",
     "output": "npx webpack --config webpack.config.output.js",
     "environment": "npx webpack --config webpack.config.environment.js",
+    "hotreplace": "npx webpack --config webpack.config.hotreplace.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "lint-staged": {
