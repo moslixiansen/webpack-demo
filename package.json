@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "private": true,
+  "sideEffects": false,
   "scripts": {
     "commit": "git add . && git cz",
     "format": "prettier --write {{changed}} \"test/**/*.js\" \"src/**/*.js\" \"src/**/*.json\" \"src/**/*.css\" ",
@@ -16,6 +17,8 @@
     "output": "npx webpack --config webpack.config.output.js",
     "environment": "npx webpack --config webpack.config.environment.js",
     "hotreplace": "npx webpack --config webpack.config.hotreplace.js",
+    "dev": "webpack-dev-server --open --config webpack.dev.js",
+    "prod": "npx webpack --config webpack.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "lint-staged": {
@@ -55,6 +58,7 @@
     "webpack-cli": "^3.3.11",
     "webpack-dev-middleware": "^3.7.2",
     "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.2",
     "xml-loader": "^1.2.1"
   },
   "dependencies": {
