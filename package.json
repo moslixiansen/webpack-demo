@@ -13,6 +13,7 @@
     "watch": "webpack --watch --config webpack.config.environment.js",
     "start-environment": "webpack-dev-server --open --config webpack.config.environment.js",
     "start-hotreplace": "webpack-dev-server --open --config webpack.config.hotreplace.js",
+    "split": "npx webpack --config webpack.config.split.js",
     "resource": "npx webpack --config webpack.config.resource.js",
     "output": "npx webpack --config webpack.config.output.js",
     "environment": "npx webpack --config webpack.config.environment.js",
